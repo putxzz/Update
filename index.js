@@ -1339,7 +1339,7 @@ bot.start(async (ctx) => {
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/mn8afh.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1401,7 +1401,7 @@ bot.action('bugmenux', async (ctx) => {
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/daxaxe.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1450,7 +1450,7 @@ bot.action('settingcmd', async (ctx) => {
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/mn8afh.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1498,7 +1498,7 @@ bot.action('ownermenu', async (ctx) => {
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/daxaxe.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1543,7 +1543,7 @@ bot.action('main_menu', async (ctx) => {
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/mn8afh.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
