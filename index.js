@@ -1069,7 +1069,6 @@ bot.command("update", async (ctx) => {
     );
 
     // restart jika pakai PM2
-    process.exit(0);
 
   } catch (e) {
     console.error(e);
